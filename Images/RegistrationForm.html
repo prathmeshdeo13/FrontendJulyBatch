@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/registration.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(188,34,195,1) 0%, rgba(16,130,226,1) 100%);
+}
+.title{
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+}
+.container{
+    max-width: 1000px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .user-details .input-box{
+    margin: 20px 0px 12px 0px;
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+   font-weight: 500;
+   font-size: 20px;
+   margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+}
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 14px 0px;
+    justify-content: space-between;
+}
+/* form .gender-details .category{
+    display: flex;
+    width: 80%;
+}
+.gender-details .category label{
+    display: flex;
+    align-items: center;    
+}
+ */
+.category .gender-title{
+    padding-right: 20px;
+}
+.button input{
+    margin-top: 10px;
+    font-size: 30px;
+    width: 100%;
+    /* background: linear-gradient(rgba(16,130,226,1) 0%, rgba(188,34,195,1) 100%,); */
+}
+.button{
+    color: linear-gradient(135deg, rgba(16,130,226,1) 0%, rgba(188,34,195,1) 100%,);
+}
+.button:hover{
+   background-color: purple;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input required type="text" placeholder="Enter Your Name">
+                </div>
+                <div class="input-box">
+                    <span class="details">User Name</span>
+                    <input required type="text" placeholder="Enter UserName">
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input required type="text" placeholder="Enter your Email">
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input required type="number" placeholder="Enter Phone number">
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input required type="password" placeholder="Enter Your Password">
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input required type="password" placeholder="Confirm Your Password">
+                </div>
+                <div class="gender-details">
+                    <div class="gender-title">Gender</div>
+                    <!-- <div class="category">
+                        <label for="">
+                            <span class="dot-one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="">
+                            <span class="dot-one"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="">
+                            <span class="dot-one"></span>
+                            <span class="gender">Prefer Not To Say</span>
+                        </label> -->
+                        <input name="gender" type="radio">
+                        <label for="Male">Male</label>
+
+                        <input name="gender" type="radio">
+                        <label for="Female">Female</label>
+
+                        
+                        <input name="gender" type="radio">
+                        <label for="Perfer not to say">Prefer not to say</label>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

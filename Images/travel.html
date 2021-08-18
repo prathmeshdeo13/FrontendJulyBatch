@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prathmesh Travels Online Booking</title>
+     
+    <link rel="stylesheet" href="css/travel.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+</head>
+<style>
+    *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;  
+}
+.showcase{
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    z-index: 2;
+    }
+.showcase a{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background: url();
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center ;
+    cursor: pointer;
+}
+.showcase header{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: blue;
+}
+.showcase video{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.text{
+    position: relative;
+    z-index: 10;
+}
+/* .overlay{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #03a9f4;
+    mix-blend-mode: overlay;
+} */
+.text h3{
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: blue;
+}
+@keyframes lefttoright {
+    from{
+    transform: translateX(-500px);
+    }
+
+    to{
+        transform: translateX(0px);
+    }
+}
+h3{
+    animation: lefttoright;
+    animation-duration: 5s;
+    animation-iteration-count:1;
+    animation-timing-function: ease-in-out;
+    /* animation-delay: 5s; */
+
+}
+.text h4{
+    font-size: 4em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+@keyframes righttoleft{
+    from{
+        transform: translateX(300px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+h4{
+    animation: righttoleft;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    /* animation-delay: 5s; */
+}
+.text p{
+    font-size: 1.1em;
+    margin: 20px 0px;
+    font-weight: 400;
+    max-width: 1000;
+}
+.text a{
+    font-size: medium;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+}
+.text a:hover{
+    color: white;
+    background-color: blue;
+}
+.social ul{
+    text-decoration: none;
+}
+.social a{
+    position: relative;
+    bottom: 10px;
+    left: 30px;
+    text-decoration: none;
+    color: blue;
+    font-size: x-large;
+    padding: 10px 20px 0px 0px;
+
+}
+.social li{
+  list-style:none;
+  padding-bottom: 10px;
+}
+
+.social{
+    position: absolute;
+    margin-bottom: 5px;
+    bottom: 50px;
+    right: 25px;
+}
+.social li a:hover{
+    color:red;
+}
+</style>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Deo Travels</h2>
+           <a href=""><i class="fas fa-bars"></i></a>
+        </header>
+
+        <video src="/Images/9convert.com - Madeira  Cinematic FPV.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h3>Never Stop</h3>
+            <h4>Explore the World</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Eius accusamus delectus illum aut, odit, aliquid molestias rerum est iure recusandae deserunt in fuga.
+                  Deleniti, hic atque! Porro suscipit et vitae similique dolorem, ex cum laborum quam quo vel cupiditate omnis
+                   pariatur id ut quas fuga doloremque aliquid. Nam, amet ducimus.</p>
+                <a href="#">Explore</a>
+        </div>
+   
+        <ul class="social">
+           <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+           <li><a href=""><i class="fab fa-instagram"></i></a></li>
+           <li><a href=""><i class="fab fa-twitter"></i></a></li>
+           <li><a href=""><i class="fab fa-snapchat"></i></a></li>
+        </ul>
+        </section>
+</body>
+</html>

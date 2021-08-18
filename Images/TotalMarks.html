@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tag</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            color:yellow;
+            height: 300px;
+            width: 100%;
+        }
+        td{
+            text-align: center;
+        }
+        body{
+            height: 100vh;
+            background: linear-gradient(145deg, rgba(188,34,195,1) 0%, rgba(16,130,226,1) 100%);
+        }
+        caption{
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            color: chartreuse;
+            font-size: xx-large;
+        }
+        caption .date{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <table>
+        <caption>Student Data
+            <span id="date"></span>
+            <span id="day"></span>
+            <span id="month"></span>
+        </caption>
+        <tr>   
+        <th>Subject</th>
+        <th>Out Of Marks</th>
+        <th>Obtanied Marks</th>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td>100</td>
+            <td> <input id="physics" type="text"></td>
+        </tr>
+
+    <tr>
+        <td>Maths</td>
+        <td>100</td>
+        <td ><input id="maths" type="text"></td>
+    </tr>
+
+    <tr>
+        <td>Chemistry</td>
+        <td>100</td>
+        <td ><input id="chemistry" type="text"></td>
+    </tr>
+    <tr>
+        <td>Biology</td>
+        <td>100</td>
+        <td><input id="biology" type="text"></td>
+    </tr>
+        <tr>
+           <td colspan="2">Total</td>
+           <td  id="totalMark"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Percantage</td>
+            <td id="percentage"></td>
+        </tr>
+        <button type="submit" onclick="totalMarks()">submit</button>
+    </table>
+    <script>
+        function totalMarks(){
+        console.log("submitted")
+
+        var physics = document.getElementById('physics').value ;
+        var maths = document.getElementById('maths').value;
+        var chemistry = document.getElementById('chemistry').value;
+        var biology = document.getElementById('biology').value;
+       var total = Number(physics) + Number(maths)+ Number(chemistry)+ Number(biology)
+        var per = total/4
+        // console.log(per)
+
+            var today = new Date();
+
+document.getElementById('date').innerHTML = today;
+document.getElementById('totalMark').innerHTML = total;
+document.getElementById('percentage').innerHTML = per+"%";
+        }
+
+        // localStorage.setItem('name','Patya')
+        // localStorage.setItem('name2','Patya1')
+        // var x = localStorage.getItem('name')
+        // console.log(x) 
+        // localStorage.removeItem('name2')
+        // localStorage.clear();
+        // localStorage.setItem('name','patya3')
+
+        sessionStorage.setItem('name','minkey')
+        sessionStorage.setItem('name2','minkey2')
+        var y = sessionStorage.getItem('name')
+        console.log(y)
+
+</script>
+</body>
+</html>

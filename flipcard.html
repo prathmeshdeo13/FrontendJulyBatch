@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+header{
+    text-align: center;
+    color: red;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}    
+ body{
+     background-color: seagreen;
+ }    
+.main-container{
+    position: absolute;
+    top: 200px;
+    left: 650px;
+    height: 320px;
+    width: 250px;
+    perspective: 1400px;
+}
+.the-card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+.the-card:hover{
+    transform: rotateY(180deg);
+    transition: 5s;
+
+}
+.front-card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background: greenyellow;
+    color: blue;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+} 
+.back-card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background: sienna;
+    color: greenyellow;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}    
+</style>
+<body>
+    <header>Flip Card</header>
+    <div class="main-container">
+
+        <div class="the-card">
+            <div class="front-card">The Front Card
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae accusantium consequatur quisquam sed consequuntur, </p>
+                <input type="button" value="submit">
+            </div>
+            <div class="back-card">The Back Card
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum molestiae, tenetur recusandae nisi neque corporis </p>
+                <input type="button" value="submit">
+            </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+h1{
+    color: red;
+    background-color: yellow;
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+body{
+    color: yellow;
+    font-size: xx-large;
+    background: url(/Images/Australia\ lockdown.jpg);
+}    
+</style>
+<body>
+    <h1>Subject</h1>
+    <input type="text" id="btn">
+    <button type="submit" onclick="submit()">Submit</button>
+    <p id="Prathmesh"></p>
+    <p id="English"></p>
+    <p id="Maths"></p>
+    <p id="Chemistry"></p>
+    <p id="physics"></p>
+    <p id="Biology"></p>
+    <hr>
+    <p id="Total"></p>  
+    <p id="per"></p>
+<script>
+    function submit(){
+        console.log("Prathmesh")
+    
+        var Prathmesh = document.getElementById("btn").value;
+        console.log(Prathmesh)
+
+    var English = 78;
+    var Maths = 89;
+    var Chemistry = 71;
+    var physics = 83;
+    var Biology = 91;
+
+    Total =parseFloat(English) + parseFloat(Maths) + parseFloat(Chemistry) + parseFloat(physics) + parseFloat(Biology);
+    //  + Chemistry + physics + Biology;
+
+per = (Total/6).toFixed(2);
+    document.getElementById("Prathmesh").innerHTML = ("StudentName:"+Prathmesh);
+    document.getElementById("English").innerHTML = ("English :"+English);
+    document.getElementById("Maths").innerHTML = ("Maths :"+Maths);
+    document.getElementById("Chemistry").innerHTML = ("Chemistry :"+Chemistry);
+    document.getElementById("physics").innerHTML = ("physics:"+physics);
+    document.getElementById("Biology").innerHTML = ("Biology :"+Biology);
+    document.getElementById("Total").innerHTML = ("Total :"+Total);
+    document.getElementById("per").innerHTML = ("percentage :"+per+"%");}
+    
+    </script>
+
+</body>
+</html>

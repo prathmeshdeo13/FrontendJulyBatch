@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header{
+        color: chartreuse;
+        background-color: coral;
+        font-size: x-large;
+        text-align: center;
+    }
+    body{
+        background-color: darkgreen;
+    }
+img{
+    height:80%;
+    width: 70%;
+    animation: fallingimg;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}    
+@keyframes fallingimg{
+    0% {transform: skewY(0deg);}
+    50% {transform: skewY(45deg) translateY(400px)}
+    100% {transform: skewY(180deg);}
+}    
+</style>
+<body>
+    <Header>Animation</Header>
+    <img src="/Images/gym2.jpg" alt="">
+</body>
+</html>
