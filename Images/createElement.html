@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+</head>
+<style>
+   
+li{
+    height: 200px;
+    width: 400px;
+    border: 2px solid red;
+    list-style: none;
+    margin: 5px;
+    color: red;
+    text-align: center;
+}   
+body{
+    background-color: greenyellow;
+} 
+</style>
+<body>
+    <input type="text" id="input">
+    <button onclick="submit()">Submit</button>
+    <ul id="ul1">
+      <li class="box" id="id1">Chinkey
+        <!-- <button onclick="remove()">remove</button> -->
+      </li >
+        <li class="box">Minkey</li>
+        <li class="box">Pinky</li>
+    </ul>
+</body>
+
+<script>
+    function submit(){
+     console.log("clicked")
+    function remove(){
+        console.log(remove) 
+        }       
+    var ul = document.getElementById('ul1')
+     var li = document.getElementById('box-1')
+     console.log(li)
+    ul.removeChild(li)
+     var input = document.getElementById('input').value
+    
+    console.log(ul)
+    var createli = document.createElement('li')
+    console.log(createli)
+    createli.innerHTML=input
+    ul.appendChild(createli) 
+    document.getElementById('input').value=""  
+    }
+    
+    // var ul = document.getElementById('ul1')
+    // console.log(ul)
+    // var createli = document.createElement('li')
+    // console.log(createli)
+    // createli.innerHTML="Rohan"
+    // ul.appendChild(createli)
+
+
+
+    document.getElementById('id1').addEventListener('mouseup',function(){
+        console.log('click')
+        document.getElementById('id1').style.color='blue';
+    })
+    var box = document.querySelectorAll('.box')
+    console.log(box)
+    for(let c of box){
+        var closebtn = document.createElement('button')
+        closebtn.innerHTML="close"
+        console.log(closebtn)
+        c.append(closebtn)
+        closebtn.addEventListener('click',function(){
+            c.remove();
+        })
+        console.log(closebtn)
+    }
+
+</script>
+</html>
