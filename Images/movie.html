@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow-OnlineTicketBooking</title>
+</head>
+<style>
+    body {
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(61, 61, 199, 1) 35%, rgba(54, 155, 176, 1) 100%);
+    }
+
+    h1 {
+        color: red;
+        text-align: center;
+    }
+
+    .container-1 {
+        display: flex;
+        flex-direction: column;
+        /* width: 100%; */
+        align-items: center;
+        /* justify-content: center; */
+        color: yellow;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    .container-1 img {
+        position: absolute;
+        height: 350px;
+        width: 530px;
+        left: 100px;
+        border-radius: 20%;
+    }
+
+    .container-2 img {
+        position: absolute;
+        height: 350px;
+        width: 570px;
+        top: 80px;
+        left: 930px;
+        border-radius: 20%;
+
+    }
+
+    .container-3 img {
+        position: absolute;
+        height: 250px;
+        width: 91%;
+        bottom: 25px;
+        left: 90px;
+    }
+    #display{
+        color:white;
+        position: absolute;
+        bottom: 50px ;
+    }
+</style>
+
+<body>
+
+    <div>
+        <h1>BookMyShow</h1>
+
+        <div class="container-1">
+            <label for="" id="name">Movie Name:</label>
+             <input type="text" list="Movie">
+            <datalist id="Movie">
+                <option value="Bhuj">Bhuj</option>
+                <option value="Bell Bottom">Bell Bottom</option>
+                <option value="Fast 9">Fast 9</option>
+                <option value="The Forever Purge">The Forever Purge</option>
+            </datalist><br>
+
+
+            <label for="City" id="c">City:</label>
+           
+            <input type="text" list="City">
+            <datalist id="City">
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Nashik">Nashik</option>
+                <option value="Aurangabad">Aurangabad</option>
+            </datalist><br>
+
+            <label for="Select Time" id="t">Select Time:</label>
+            
+            <select name="select Time" id="select Time">
+                <option value="">10 a.m</option>
+                <option value="">12 pm</option>
+                <option value="">3 pm</option>
+                <option value="">9 pm</option>
+            </select><br>
+
+            <label for="Age" id="ag">Age:</label>
+           
+            <input type="number" name="age" id="age"></br>
+
+            <label for="fullprice" >FullTicket:</label>
+          
+            <input type="number" name="age" id="fullprice"></br>
+
+            
+            <label for="halfticket" >Half Ticket:</label>
+          
+            <input type="number" name="age" id="halfticket"></br>
+
+
+            <label for="total price" id="tp">Total Price:</label>
+           
+            <input onclick="" type="number" name="age" id="price"></br>
+
+
+            <button onclick="submitVal()" type="submit">Book Now</button>
+           
+        
+    <img src="/Images/ajay.jpg" alt="">
+    </div>
+    </div>
+    <div class="container-2">
+        <img src="/Images/akshay.jpg" alt="">
+    </div>
+    <!-- <div class="container-3">
+            <img src="/Images/poster2.jpg" alt="">
+        </div> -->
+
+        <div id="display">
+            <label for="">Movie Name:</label><span id="mn"></span><br>
+            <label for="">City:</label><span id="ct"></span><br>
+            <label for="">Select Time:</label><span id="st"></span><br>
+            <label for="">Age:</label><span id="ag"></span><br>
+            <label for="">FullTicket:</label><span id="persons"></span><br>
+            <label for="">HalfTicket:</label><span id="persons"></span><br>
+            <label for="">TotalPrice:</label><span id="totalprice"></span><br>
+        </div>
+
+
+</body>
+<script>
+    function submitVal() {
+        console.log('submitVal')
+        var movien = document.getElementById('mn').value
+        var city = document.getElementById('ct').value
+        var time = document.getElementById('st').value
+        var age=document.getElementById('ag').value
+        var fullticket =document.getElementById('fullprice').value
+        var halfticket = document.getElementById('halfticket').value
+        // var persons = document.getElementById('persons').value
+        // console.log(persons)
+        var TotalPrice =document.getElementById('totalprice').value
+        // if(age<=18)
+        // {
+        //     price = 80;
+        //     console.log(price)
+
+        // }
+        // else{
+        //     price = 100
+        //     console.log(price)
+        // }
+
+        var fullticket = 2*100
+        console.log(fullticket)
+        var halfticket = 3 *80
+        console.log(halfticket)
+
+        var sum = fullticket+halfticket
+        console.log(sum)
+        
+        var TotalPrice = document.getElementById('totalprice').innerHTML=sum
+        
+
+
+        // var TotalPrice = document.getElementById('price').innerHTML=payprice
+        // document.getElementById("name").innerHTML=movien
+
+        var movieName = document.getElementById("mn").innerHTML=movien;
+    }
+
+   
+</script>
+
+</html>
