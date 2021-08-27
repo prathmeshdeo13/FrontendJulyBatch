@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="div1">
+        <h1 id="h1">Document</h1>
+        <ul id="ul1">
+            <li class="box">Apple</li>
+            <li class="box">kiwi</li>
+            <li class="box">Banana</li>
+        </ul>
+    </div>
+</body>
+<script>
+    var s = document.getElementById('div1')  //single tag selector.
+    // var s = document.getElementsByClassName('box') // multiple tag selector.
+    // var s = document.querySelectorAll('.box') // class 1st element selector.
+    // var s = document.querySelector('.box')  //class all attribute selector.
+
+    // console.log(s.firstChild)
+    // console.log(s.children)
+    // console.log(s.firstChild)
+    // console.log(s.childNodes)
+   
+    var c = s.firstElementChild
+    c.style.color ="Blue"
+
+    var ul =  document.getElementById('ul1')
+    console.log(ul.lastElementChild)
+
+</script>
+</html>

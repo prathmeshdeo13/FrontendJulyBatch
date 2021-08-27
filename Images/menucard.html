@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Card</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .fullimg img {
+        width: 100%;
+    }
+
+    header {
+        color: white;
+        background-color: black;
+        font-size: 50px;
+        text-align: center;
+    }
+    /* .menu{
+        position: absolute;
+       top: 50px;
+       left: 30px;
+       font-size: medium;
+       color: red;
+    } */
+</style>
+
+<body>
+    <header>Menu Card</header>
+    <div class="fullimg">
+        <img src="/Images/Cohn_Coasterra.jpg" alt="">
+       
+
+        <!-- <ul class="menu">
+            <li id="order">order</li>
+            <li id="totalprice">totalprice</li>
+            <li id="coho_salmon">coho_salmon</li>
+            <li id="oregon_trout">oregon_trout</li>
+            <li id="demonico">demonico</li>
+            <li id="prosciutto">prosciutto</li>
+        </ul> -->
+    </div>
+    <script>
+        var order = "";
+        var total_price = 0.0;
+        const coho_salmon = 45.0;
+        const oregon_trout = 70.0;
+        const delmonico = 25.0;
+        const prosciutto = 89.0;
+
+        do {
+            console.log("Welcome to Coasterra");
+            console.log("*********MENU********")
+            console.log("1.coho_salmon =" + coho_salmon + "$" + " 2.oregon_trout = " + oregon_trout + "$" + " 3.delmonico =" + delmonico + "$" + " 4.prosciutto =" + prosciutto + "$")
+            console.log("Please place your order");
+            var item = prompt("")
+            switch (item) {
+                case "1":
+                    order = order + "coho_salmon";
+                    total_price = total_price + coho_salmon;
+                    break;
+
+                case "2":
+                    order = order + "oregon_trout";
+                    total_price = total_price + oregon_trout;
+                    break;
+
+                case "3":
+                    order = order + "delmonico";
+                    total_price = total_price + delmonico;
+                    break;
+
+                case "4":
+                    order = order + "prosciutto";
+                    total_price = total_price + prosciutto;
+                    break;
+
+                case "5":
+                    console.log("You have ordered" + order);
+                    console.log("Your total bill is " + total_price) +"$";
+                default :
+                    console.log("Not available")
+            }
+            console.log("Your bill so far is " + total_price + "$" );
+            } while (item !=6)
+
+        //    var od = document.getElementById('order').innerHTML= order;
+
+    </script>
+</body>
+
+</html>
