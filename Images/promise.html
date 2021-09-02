@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        console.log("Start")
+      let p = new Promise(function(resolve,reject){
+
+        //   var a= 5
+        //   if(a==5){
+        //       resolve("Successfully resolve")
+        //   }else{
+        //       reject("successfully rejected")
+        //   }
+        setTimeout(function(){
+            resolve("succesfully resolved in setTimeOut")
+        },10000)  
+      })
+
+      p.then(
+       function(value){
+           console.log(value)
+       },
+       function(err){
+           console.log(err)
+        })
+        console.log("End")  
+    </script>
+</body>
+</html>

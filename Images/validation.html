@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    
+    <!-- <input type="number" id="mobile" placeholder="Enter mobile number"> -->
+    <!-- <input type="number" id="zip" placeholder="Enter the zip Code"> -->
+    <input type="number" id="marks" placeholder="Enter the marks">
+    <button onclick="submit()">Click</button>
+</body>
+<script>
+    function submit(){
+        console.log('submit')
+
+        // var mobile = document.getElementById('mobile').value;
+        // mpattern=/^\d{10}$/;
+        // if(mobile == ""){
+        //     alert("Enter the mobile no")
+        // }else if(mpattern.test(mobile)){
+        //     alert("Your mobile no is "+ mobile)
+        // }else{
+        //     alert("Enter valid mobile no")
+        // }
+
+        // var zipcode = document.getElementById('zip').value;
+        // zpattern =  /^\d{5}(-\d{4})?$/;
+        // if(zipcode == ''){
+        //     alert("Enter the zip code")
+        // }else if(zpattern.test(zipcode)){
+        //     alert("Your Zip Code is " + zipcode)
+        // }else{
+        //     alert("Enter valid zip code")
+        // }.
+
+        var marks = document.getElementById('marks').value;
+        mkpattern = /^[1-9][0-9]?$|^100$/
+        if(marks == ''){
+            alert("Enter the marks")
+        }else if(mkpattern.test(marks)){
+            alert("Marks is  :"+marks)
+        }else{
+            alert("Enter valid marks")
+        }
+
+
+    }
+</script>
+</html>
