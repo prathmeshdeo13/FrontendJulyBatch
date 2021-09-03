@@ -105,23 +105,23 @@ form .gender-details .gender-title{
                 </div>
                 <div class="input-box">
                     <span class="details">User Name</span>
-                    <input type="text" placeholder="Enter UserName">
+                    <input type="text" id="uname" placeholder="Enter UserName">
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input type="text" placeholder="Enter your Email">
+                    <input type="text" id="email" placeholder="Enter your Email">
                 </div>
                 <div class="input-box">
                     <span class="details">Phone Number</span>
-                    <input  type="number" placeholder="Enter Phone number">
+                    <input  type="number" id="phoneno" placeholder="Enter Phone number">
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input type="password" placeholder="Enter Your Password">
+                    <input type="password" id="password" placeholder="Enter Your Password">
                 </div>
                 <div class="input-box">
                     <span class="details">Confirm Password</span>
-                    <input type="password" placeholder="Confirm Your Password">
+                    <input type="password" id="confirmp" placeholder="Confirm Your Password">
                 </div>
                 <div class="gender-details">
                     <div class="gender-title">Gender</div>
@@ -168,6 +168,46 @@ form .gender-details .gender-title{
           }else{
               alert("Enter valid name")
           }
+
+          var UserName = document.getElementById('uname').value;
+          upattern =/^[a-zA-Z0-9]+$/; 
+          if(UserName==""){
+              alert("Enter the user name")
+          }else if(upattern.test(UserName)){
+              alert("Username is :" + UserName)
+          }else{
+              alert("Enter the valid username")
+          }
+
+          var email = document.getElementById('email').value;
+          epattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+          if(email==""){
+              alert("Enter the email")
+          }else if(epattern.test(email)){
+              alert("Your email is :" +email)
+          }else{
+              alert("Enter the valid email")
+          }
+
+          var phoneno = document.getElementById('phoneno').value;
+          ppattern=/^\d{10}$/;
+          if(phoneno==""){
+              alert("Enter the phone number")
+          }else if(ppattern.test(phoneno)){
+              alert("Your phone no is :" +phoneno)
+          }else{
+              alert("Enter valid phone no")
+          }
+
+          var password =  document.getElementById('password').value;
+          spattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+          if(password==""){
+              alert("Enter the password")
+          }else if(spattern.test(password)){
+              alert("Your password is : " +password)
+          }else{
+              alert("Enter valid password")
+          } 
         }
     </script>
 </body>

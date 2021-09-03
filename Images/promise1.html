@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        // console.log("Starts")
+        var  k = new Promise(function(resolve,reject){
+            let a = 15;
+            if(a==10){
+                resolve("successfully resolve")
+            }else{
+                reject("rejected ....")
+            }
+        //     setTimeout(function() {
+        //     resolve("sucessfully resolved in setTimeout")   //asynchronized 
+        // },10000);
+        })
+      
+        k.then(
+            function(value){
+                console.log(value)
+            },
+            function(err){
+                console.log(err)
+            })
+        //  console.log("End")   
+    </script>
+</body>
+</html>
