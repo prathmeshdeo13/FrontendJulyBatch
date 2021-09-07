@@ -1,74 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RegistartionForm</title>
 
     <link rel="stylesheet" href="css/registration.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    
+
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 
 </head>
 <style>
-    *{
+    * {
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
         font-family: 'Times New Roman', Times, serif;
     }
-body{
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background: linear-gradient(135deg, rgba(188,34,195,1) 0%, rgba(16,130,226,1) 100%);
-}
-.title{
-    font-size: 30px;
-    font-weight: 700;
-    color: #000;
-}
-.container{
-    max-width: 1000px;
-    width: 100%;
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 5px;
-}
-.container form .user-details{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-form .user-details .input-box{
-    margin: 20px 0px 12px 0px;
-    width: calc(100% / 2 - 20px);
-}
-.user-details .input-box .details{
-    display: block;
-   font-weight: 500;
-   font-size: 20px;
-   margin-bottom: 5px;
-}
-.user-details .input-box input{
-    height: 45px;
-    width: 100%;
-}
-form .gender-details .gender-title{
-    font-size: 20px;
-    font-weight: 600;
-    margin: 14px 0px;
-    justify-content: space-between;
-}
-/* form .gender-details .category{
+
+    body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        /* background: linear-gradient(135deg, rgba(188, 34, 195, 1) 0%, rgba(16, 130, 226, 1) 100%); */
+        background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,61,199,1) 35%, rgba(54,155,176,1) 100%);
+    }
+
+    .title {
+        font-size: 30px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .container {
+        max-width: 1000px;
+        width: 100%;
+        background: #fff;
+        padding: 25px 30px;
+        border-radius: 10px;
+    }
+
+    .container form .user-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    form .user-details .input-box {
+        margin: 20px 0px 12px 0px;
+        width: calc(100% / 2 - 20px);
+    }
+
+    .user-details .input-box .details {
+        display: block;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .user-details .input-box input {
+        height: 45px;
+        width: 100%;
+    }
+
+    form .gender-details .gender-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 14px 0px;
+        justify-content: space-between;
+    }
+
+    /* form .gender-details .category{
     display: flex;
     width: 80%;
 }
@@ -77,23 +89,27 @@ form .gender-details .gender-title{
     align-items: center;    
 }
  */
-.category .gender-title{
-    padding-right: 20px;
-}
-.button input{
-    margin-top: 10px;
-    font-size: 30px;
-    width: 100%;
-    margin-left: 15px;
-    /* background: linear-gradient(rgba(16,130,226,1) 0%, rgba(188,34,195,1) 100%,); */
-}
-.button{
-    color: linear-gradient(135deg, rgba(16,130,226,1) 0%, rgba(188,34,195,1) 100%,);
-}
-.gender-title label{
-    margin-right: 30px;
-}
+    .category .gender-title {
+        padding-right: 20px;
+    }
+
+    .button input {
+        margin-top: 10px;
+        font-size: 30px;
+        width: 100%;
+        margin-left: 15px;
+        /* background: linear-gradient(rgba(16,130,226,1) 0%, rgba(188,34,195,1) 100%,); */
+    }
+
+    .button {
+        color: linear-gradient(135deg, rgba(16, 130, 226, 1) 0%, rgba(188, 34, 195, 1) 100%, );
+    }
+
+    .gender-title label {
+        margin-right: 30px;
+    }
 </style>
+
 <body>
     <div class="container">
         <div class="title">Registration</div>
@@ -101,7 +117,7 @@ form .gender-details .gender-title{
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Full Name</span>
-                    <input  type="text" id="name" placeholder="Enter Your Name">
+                    <input type="text" id="name" placeholder="Enter Your Name">
                 </div>
                 <div class="input-box">
                     <span class="details">User Name</span>
@@ -113,7 +129,7 @@ form .gender-details .gender-title{
                 </div>
                 <div class="input-box">
                     <span class="details">Phone Number</span>
-                    <input  type="number" id="phoneno" placeholder="Enter Phone number">
+                    <input type="number" id="phoneno" placeholder="Enter Phone number">
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
@@ -138,77 +154,96 @@ form .gender-details .gender-title{
                             <span class="dot-one"></span>
                             <span class="gender">Prefer Not To Say</span>
                         </label> -->
-                        <input name="gender" type="radio">
-                        <label for="Male">Male</label>
+                    <input name="gender" type="radio">
+                    <label for="Male">Male</label>
 
-                        <input name="gender" type="radio">
-                        <label for="Female">Female</label>
+                    <input name="gender" type="radio">
+                    <label for="Female">Female</label>
 
-                        
-                        <input name="gender" type="radio">
-                        <label for="Perfer not to say">Prefer not to say</label>
-                    </div>
-                </div>
-                <div onclick="submit()" class="button">
-                    <input type="submit" value="Register">
+
+                    <input name="gender" type="radio">
+                    <label for="Perfer not to say">Prefer not to say</label>
                 </div>
             </div>
-        </form>
+            <div onclick="submit()" class="button">
+                <input type="submit" value="Register">
+            </div>
+    </div>
+    </form>
     </div>
     <script>
-        function submit(){
-          console.log('submit') 
-          
-          var fullname = document.getElementById('name').value;
-          npattern = /^[a-zA-Z ]+$/;
-          if(fullname == ""){
-              alert("Enter the Full name")
-          }else if(npattern.test(fullname)){
-              alert("your name is  :"+fullname)
-          }else{
-              alert("Enter valid name")
-          }
+        function submit() {
+            console.log('submit')
 
-          var UserName = document.getElementById('uname').value;
-          upattern =/^[a-zA-Z0-9]+$/; 
-          if(UserName==""){
-              alert("Enter the user name")
-          }else if(upattern.test(UserName)){
-              alert("Username is :" + UserName)
-          }else{
-              alert("Enter the valid username")
-          }
+            var fullname = document.getElementById('name').value;
+            npattern = /^[a-zA-Z ]+$/;
+            if (fullname == "") {
+                alert("Enter the Full name")
+            } else if (npattern.test(fullname)) {
+                alert("your name is  :" + fullname)
+            } else {
+                alert("Enter valid name")
+            }
 
-          var email = document.getElementById('email').value;
-          epattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-          if(email==""){
-              alert("Enter the email")
-          }else if(epattern.test(email)){
-              alert("Your email is :" +email)
-          }else{
-              alert("Enter the valid email")
-          }
+            var UserName = document.getElementById('uname').value;
+            upattern = /^[a-zA-Z0-9]+$/;
+            if (UserName == "") {
+                alert("Enter the user name")
+            } else if (upattern.test(UserName)) {
+                alert("Username is :" + UserName)
+            } else {
+                alert("Enter the valid username")
+            }
 
-          var phoneno = document.getElementById('phoneno').value;
-          ppattern=/^\d{10}$/;
-          if(phoneno==""){
-              alert("Enter the phone number")
-          }else if(ppattern.test(phoneno)){
-              alert("Your phone no is :" +phoneno)
-          }else{
-              alert("Enter valid phone no")
-          }
+            var email = document.getElementById('email').value;
+            epattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if (email == "") {
+                alert("Enter the email")
+            } else if (epattern.test(email)) {
+                alert("Your email is :" + email)
+            } else {
+                alert("Enter the valid email")
+            }
 
-          var password =  document.getElementById('password').value;
-          spattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-          if(password==""){
-              alert("Enter the password")
-          }else if(spattern.test(password)){
-              alert("Your password is : " +password)
-          }else{
-              alert("Enter valid password")
-          } 
+            var phoneno = document.getElementById('phoneno').value;
+            ppattern = /^\d{09}$/;
+            if (phoneno == "") {
+                alert("Enter the phone number")
+            } else if (ppattern.test(phoneno)) {
+                alert("Your phone no is :" + phoneno)
+            } else {
+                alert("Enter valid phone no")
+            }
+
+            var password = document.getElementById('password').value;
+            spattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+            if (password == "") {
+                alert("Enter the password")
+            } else if (spattern.test(password)) {
+                alert("Your password is : " + password)
+            } else {
+                alert("Enter valid password")
+            }
+
+            fetch('http://localhost:8080/api/registrationForm/saveRegistration', {
+                method: 'POST',
+                body: JSON.stringify({
+                    confirmPassword: document.getElementById("confirmp").value,
+                    email: document.getElementById("email").value,
+                    fullName: document.getElementById("name").value,
+                    gender: document.getElementsByClassName("gender-details").value,
+                    password: document.getElementById("password").value,
+                    phoneNumber: document.getElementById("phoneno").value,
+                    userName: document.getElementById("uname").value
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+                .then((response) => response.json())
+                .then((json) => console.log(json));
         }
     </script>
 </body>
+
 </html>
