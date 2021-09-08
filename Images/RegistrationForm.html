@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RegistartionForm</title>
+    <title>RegistrationForm</title>
 
     <link rel="stylesheet" href="css/registration.css">
 
@@ -32,8 +32,10 @@
         align-items: center;
         padding: 20px;
         /* background: linear-gradient(135deg, rgba(188, 34, 195, 1) 0%, rgba(16, 130, 226, 1) 100%); */
-        background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,61,199,1) 35%, rgba(54,155,176,1) 100%);
+        /* background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,61,199,1) 35%, rgba(54,155,176,1) 100%); */
+background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     }
 
     .title {
@@ -154,15 +156,17 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,61,199,1) 35%, rgb
                             <span class="dot-one"></span>
                             <span class="gender">Prefer Not To Say</span>
                         </label> -->
-                    <input name="gender" type="radio">
-                    <label for="Male">Male</label>
-
+                    <input type="radio"  name="gender" id="r1" value="male">Male
+                    <input type="radio"  name="gender" id="r2" value="Female">female
+                    <input type="radio"  name="gender" id="r3" value="Prefer not to say">Prefer not to say
+                    <!-- <label for="Male">Male</label> -->
+<!-- 
                     <input name="gender" type="radio">
                     <label for="Female">Female</label>
 
 
                     <input name="gender" type="radio">
-                    <label for="Perfer not to say">Prefer not to say</label>
+                    <label for="Perfer not to say">Prefer not to say</label> -->
                 </div>
             </div>
             <div onclick="submit()" class="button">
@@ -225,13 +229,25 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,61,199,1) 35%, rgb
                 alert("Enter valid password")
             }
 
+            var gender;
+            if(document.getElementById('r1').checked)
+            {
+                gender=document.getElementById('r1').value;
+            }else if(document.getElementById("r2").checked){
+                gender = document.getElementById("r2").value;
+            }else if(document.getElementById("r3").checked)
+            {
+                gender=document.getElementById("r3").value
+            }
+            console.log(gender)
+
             fetch('http://localhost:8080/api/registrationForm/saveRegistration', {
                 method: 'POST',
                 body: JSON.stringify({
                     confirmPassword: document.getElementById("confirmp").value,
                     email: document.getElementById("email").value,
                     fullName: document.getElementById("name").value,
-                    gender: document.getElementsByClassName("gender-details").value,
+                    gender: gender,
                     password: document.getElementById("password").value,
                     phoneNumber: document.getElementById("phoneno").value,
                     userName: document.getElementById("uname").value
@@ -242,6 +258,25 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,61,199,1) 35%, rgb
             })
                 .then((response) => response.json())
                 .then((json) => console.log(json));
+
+
+            //     fetch('http://localhost:8080/api/registration1/saveRegistration1 ', {
+            //     method: 'POST',
+            //     body: JSON.stringify({
+            //         confirmPassword: document.getElementById("confirmp").value,
+            //         email: document.getElementById("email").value,
+            //         fullName: document.getElementById("name").value,
+            //         gender: document.getElementsByClassName("gender-details").value,
+            //         password: document.getElementById("password").value,
+            //         phoneNumber: document.getElementById("phoneno").value,
+            //         userName: document.getElementById("uname").value
+            //     }),
+            //     headers: {
+            //         'Content-type': 'application/json; charset=UTF-8',
+            //     },
+            // })
+            //     .then((response) => response.json())
+            //     .then((json) => console.log(json));   
         }
     </script>
 </body>
