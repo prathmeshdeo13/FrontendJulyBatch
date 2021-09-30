@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym-onlineBooking</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .navbar {
+    font-size: 20px;
+  }
+
+  .navbar-light .navbar-nav .nav-item {
+    padding: 0px 15px;
+    color: #000;
+  }
+
+  .navbar-light .navbar-nav .nav-item a:hover,
+  .navbar-light .navbar-nav .nav-item i:hover {
+    color: slateblue;
+  }
+
+  #home {
+    color: blue;
+  }
+
+  .nav-link a {
+    color: red;
+  }
+
+  .navbar i {
+    font-size: 1.2rem;
+    padding: 0px 7px;
+    top: 0;
+    left: 0;
+  }
+
+  section p {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #section span {
+    color: greenyellow;
+  }
+
+  button {
+    font-size: 12px;
+    background-color: black;
+    color: greenyellow;
+    padding: 13px 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  button:hover {
+    color: black;
+    background-color: chartreuse;
+  }
+
+  #section {
+    background: url(/Images/gym.4.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: top 30px center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #section h5,
+  h1,
+  p {
+    color: white;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: greenyellow;">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Fitnation</a> -->
+    <img class="m-0" height=80px width=80px src="/Images/gymlogo.jpg" alt="">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" id="home" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-search"></i>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+          </li>
+        </ul>
+        <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>  -->
+    </div>
+  </div>
+</nav>
+
+<section id="section">
+  <div class="container">
+    <h5>Hurry Up</h5>
+    <h1><span>Best Price</span> This Year</h1>
+    <p>Eat Mindfully,Sweat Often &<br>
+      Self Love Always
+    </p>
+    <button>Learn More</button>
+  </div>
+</section>
+
+<section id="logos" class="container-fluid">
+  <div class="row m-0 py-5">
+    <img class="img-fluid col-lg-2 col-md-4 col-6" src="/Images/gym-logo1.jpg" alt="">
+    <img class="img-fluid col-lg-2 col-md-4 col-6" src="/Images/gym-logo2.jpg" alt="">
+    <img class="img-fluid col-lg-2 col-md-4 col-6" src="/Images/gym-logo3.jpg" alt="">
+    <img class="img-fluid col-lg-2 col-md-4 col-6" src="/Images/gym-logo4.jpg" alt="">
+    <img class="img-fluid col-lg-2 col-md-4 col-6" src="/Images/gym-logo5.jpg" alt="">
+    <img class="img-fluid col-lg-2 col-md-4 col-6" src="/Images/gym-logo6.jpg" alt="">
+  </div>
+</section>
+
+<body>
+
+</body>
+
+</html>
